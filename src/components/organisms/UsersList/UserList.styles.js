@@ -9,7 +9,7 @@ export const WrapperDiv = styled.div`
   box-shadow: 0 5px 15px -10px rgba(0, 0, 0, 0.3);
 `;
 
-export const StyledListUl = styled.ul`
+export const StyledUl = styled.ul`
   list-style: none;
   margin: 0;
   padding: 0;

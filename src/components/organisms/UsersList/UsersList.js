@@ -1,15 +1,15 @@
 import React from 'react';
 import { users } from 'data/users';
 import UsersListItem from '../../molecules/UsersListItem/UsersListItem';
-import { StyledListUl, WrapperDiv } from './UserList.styles';
+import { StyledUl, WrapperDiv } from './UserList.styles';
 
 const UsersList = () => (
   <WrapperDiv>
-    <StyledListUl>
-      {users.map((userData) => {
-        return <UsersListItem key={userData.name} userData={userData} />;
+    <StyledUl>
+      {users.map((userData, idx) => {
+        return <UsersListItem key={userData.name} index={idx} userData={userData} />;
       })}
-    </StyledListUl>
+    </StyledUl>
   </WrapperDiv>
 );
 
