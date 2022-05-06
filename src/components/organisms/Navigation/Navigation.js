@@ -1,21 +1,21 @@
 import React from 'react';
-import { Logo, StyledLink, Wrapper } from 'components/organisms/Navigation/Navigation.styles';
+import { StyledLogoDiv, StyledLink, StyledNav } from 'components/organisms/Navigation/Navigation.styles';
 
 const Navigation = () => {
   return (
-    <Wrapper>
-      <Logo>
+    <StyledNav>
+      <StyledLogoDiv>
         <h1>
-          Study
+          Student
           <br />
-          Buddy
+          App
         </h1>
-      </Logo>
+      </StyledLogoDiv>
       <StyledLink to="/">Dashboard</StyledLink>
       <StyledLink to="/add-user">Add user</StyledLink>
       <StyledLink to="/">Settings</StyledLink>
       <StyledLink to="/">Logout</StyledLink>
-    </Wrapper>
+    </StyledNav>
   );
 };
 

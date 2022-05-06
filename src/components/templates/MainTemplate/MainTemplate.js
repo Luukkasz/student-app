@@ -4,6 +4,7 @@ import { Wrapper } from 'components/templates/MainTemplate/MainTemplate.styles';
 
 const MainTemplate = ({ children }) => {
   return (
+    //Wrapper calosci z Gridem
     <Wrapper>
       <Navigation />
       {children}
