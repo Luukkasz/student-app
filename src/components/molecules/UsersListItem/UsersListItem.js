@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Button from '../../atoms/Button/Button';
+import DeleteButton from '../../atoms/DeleteButton/DeleteButton';
 import { StyledAverageDiv, StyledInfoDiv, StyledLi } from './UserListItem.styles';
 
 const UsersListItem = ({ deleteUser, userData: { average, name, attendance = '0%' } }) => (
@@ -9,7 +9,7 @@ const UsersListItem = ({ deleteUser, userData: { average, name, attendance = '0%
     <StyledInfoDiv>
       <p className="user__name">
         {name}
-        <Button onClick={() => deleteUser(name)} />
+        <DeleteButton onClick={() => deleteUser(name)} />
       </p>
       <p className="user__attendance">attendance: {attendance}</p>
     </StyledInfoDiv>

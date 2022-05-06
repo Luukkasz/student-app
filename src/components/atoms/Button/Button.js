@@ -1,12 +1,12 @@
-import React from 'react';
-// Import ikony X jako ReactComponent aby mozna bylo latwiej stylowac
-import { ReactComponent as DeleteIcon } from 'assets/icons/delete-icon.svg';
-import { StyledButton } from './Button.styles';
+import styled from 'styled-components';
 
-const Button = (props) => (
-  <StyledButton {...props}>
-    <DeleteIcon />
-  </StyledButton>
-);
-
-export default Button;
+export const Button = styled.button`
+  margin-top: 20px;
+  padding: 10px 20px;
+  border-radius: 96px;
+  font-size: ${({ theme }) => theme.fontSize.s};
+  background-color: ${({ theme }) => theme.colors.lightPurple};
+  color: ${({ theme }) => theme.colors.darkGrey};
+  font-weight: bold;
+  border: none;
+`;
