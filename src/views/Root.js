@@ -4,7 +4,7 @@ import { GlobalStyle } from '../assets/styles/GlobalStyle';
 import { theme } from '../assets/styles/theme';
 import { WrapperDiv } from './Root.styles';
 import 'assets/styles/fonts.css';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { users as usersData } from '../data/users';
 import MainTemplate from '../components/templates/MainTemplate/MainTemplate';
 import AddUser from './AddUser';
