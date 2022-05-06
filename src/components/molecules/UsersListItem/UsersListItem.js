@@ -1,28 +1,23 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { useContext } from 'react';
 import DeleteButton from '../../atoms/DeleteButton/DeleteButton';
 import { StyledAverageDiv, StyledInfoDiv, StyledLi } from './UserListItem.styles';
+import { UsersContext } from 'providers/UsersProvider';
 
-const UsersListItem = ({ deleteUser, userData: { average, name, attendance = '0%' } }) => (
-  <StyledLi>
-    <StyledAverageDiv value={average}>{average}</StyledAverageDiv>
-    <StyledInfoDiv>
-      <p className="user__name">
-        {name}
-        <DeleteButton onClick={() => deleteUser(name)} />
-      </p>
-      <p className="user__attendance">attendance: {attendance}</p>
-    </StyledInfoDiv>
-  </StyledLi>
-);
+const UsersListItem = ({ userData: { average, name, attendance = '0%' } }) => {
+  const { deleteUser } = useContext(UsersContext);
 
-// Sprawdzenie poprawności propsow
-UsersListItem.propTypes = {
-  userData: PropTypes.shape({
-    average: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    attendance: PropTypes.string,
-  }),
+  return (
+    <StyledLi>
+      <StyledAverageDiv value={average}>{average}</StyledAverageDiv>
+      <StyledInfoDiv>
+        <p className="user__name">
+          {name}
+          <DeleteButton onClick={() => deleteUser(name)} />
+        </p>
+        <p className="user__attendance">attendance: {attendance}</p>
+      </StyledInfoDiv>
+    </StyledLi>
+  );
 };
 
 export default UsersListItem;

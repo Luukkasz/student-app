@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 export const StyledNav = styled.nav`
   width: 100%;
@@ -25,10 +25,14 @@ export const StyledLogoDiv = styled.div`
   }
 `;
 
-export const StyledLink = styled(Link)`
+export const StyledLink = styled(NavLink)`
   font-weight: bold;
   text-decoration: none;
   color: ${({ theme }) => theme.colors.darkGrey};
   margin: 20px 20px 20px 40px;
   text-align: right;
+
+  &.active {
+    color: cornflowerblue;
+  }
 `;
