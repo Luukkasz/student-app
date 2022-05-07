@@ -19,7 +19,7 @@ function FormField({ value, onChange, label, name, id, type = 'text' }) {
     <>
       <WrapperDiv>
         <Label htmlFor={id}>{label}</Label>
-        <Input name={name} type={type} id={id} value={value} onChange={onChange} />
+        <Input name={name} type={type} id={id} value={value} onChange={onChange} data-testid={label} />
       </WrapperDiv>
     </>
   );
