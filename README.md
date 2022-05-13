@@ -1,6 +1,7 @@
 # Student App
 Student management application. <br>
-Still under development.
+Still under development. <br>
+Work on this project will resume after completing the Diet Planner application.
 
 <br>
 
